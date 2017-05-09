@@ -19,6 +19,8 @@ class FilmsController < ApplicationController
       format.json do
         if @film.save
           render json: @film
+          # render json: { film: @film, foo: 1 }
+          # can only render once
         else
           render :index
           # can also render json error message
